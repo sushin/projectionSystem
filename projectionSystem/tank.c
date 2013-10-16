@@ -1,6 +1,7 @@
 #include <graphics.h>
 #include <stdio.h>
 #include <conio.h>
+#include <math.h>
 
 
 //methods to initialize the graphics
