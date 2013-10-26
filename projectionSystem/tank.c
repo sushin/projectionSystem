@@ -4,6 +4,7 @@
 #include <math.h>
 
 #define _GRAVITY_ 9.8
+#define _PI_ 3.14
 
 int _angle;
 int _timeFrame=0;
@@ -57,10 +58,19 @@ void graphics(){
 void main(){
 	 initGraphics();
 	 graphics();
+	 aa:
 	 getInput();
-	 while(kbhit){
+	 while(kbhit()){
 		 for(_timeFrame = 0;_timeFrame<50;_timeFrame++){
 			 putpixel(getProjectileX(_timeFrame,_angle,_velocity),getProjectileY(_timeIndex,_angle,_velocity),RED);
-		 }
+		}
+		 break;
 	 }
+         printf("Do you want to try again");
+         scanf("%c",&reply);
+         if(reply == 'y'){
+	       clearviewport();
+		   goto aa;
+		}
+
 }
